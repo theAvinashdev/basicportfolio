@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    @apply font-primary bg-background;
+}
+
+/* styling nav bar */
+#navbar{
+  @apply bg-white/5 text-white backdrop-blur-[10px] sticky top-0 left-0 items-center z-[100];
+}
+
+/* // SKILLS SECTION */
+.skill_showcase {
+  @apply flex gap-6 md:overflow-hidden overflow-x-auto; /* full width & height */
+}
+
+.skill_cards {
+  @apply w-[50%] md:w-full md:flex-shrink flex-shrink-0 h-auto rounded-xl bg-accent/45 shadow-lg ring-1 ring-white/5 p-3
+  flex justify-center items-center;
+}
+
+
+/* // PROJECT SECTION */
+.skill_used {
+  @apply flex items-center gap-3;
+}
+.skill_used div {
+  @apply bg-white shadow-lg rounded-full object-contain flex justify-center items-center w-[50px] h-[50px];
+}
+
+.skill_used div img{
+  @apply w-[75%] ;
+}
+
+
+.project_image_section {
+  @apply h-[230px] md:h-[350px];
+}
+.project_image_section img{
+  @apply h-[100%] rounded-lg
+}
+
+.project_title {
+  @apply text-lg my-3 font-semibold text-accent;
+}
+
+.project{
+  @apply bg-white/20 backdrop-blur-sm rounded-lg flex flex-col gap-3 p-5;
+}
+
+.project_links {
+  @apply flex md:justify-start justify-center py-2 md:py-3 items-center;
+}
+
+.git_repo p {
+  @apply break-words underline text-cyan-300;
+}
+
+/* //  UTILITY CLASS-- */
+
+/* LINK BUTTON STYLING */
+.link_button{
+  @apply bg-primary text-black px-2 py-1 rounded-lg inline-block text-lg
+  hover:bg-accent
+  hover:text-white
+  transition-all
+  ease-in
+  my-2
+  ;
+}
+
+.section_margins{
+  @apply my-[1.5rem]
+  md:my-[2.5rem]
+  ;
+}
+
+/* HREF STYLING */
+a{
+  @apply
+  hover:text-primary;
+}
+
+.nav_buttons{
+  @apply bg-accent py-3 px-5 rounded-lg
+  hover:bg-primary
+  hover:text-white
+  transition-all
+  ease-in
+  duration-300
+  ;
+}
+
+/* SETTING UP HEADING STYLES */
+.section_heading {
+  @apply text-2xl uppercase font-primary font-semibold md:my-2 my-[2.5rem] md:text-left text-center; 
+}
+
+/* // SETTING UP THE SUB HEADING STYLES */
+.sub_heading {
+  @apply text-lg text-accent pt-2 pb-1;
+}
+
+/* // CONTACT ME SECTION STYLINGS */
+.social_links{
+  @apply flex justify-center items-center gap-5;
+}
+
+.social_links a{
+  @apply font-thin text-3xl;
+}
+
+.user_fields{
+  @apply bg-transparent border-2 border-white inline-block w-full py-2 my-3 rounded-md
+  focus:bg-white/25; 
+}
+.form_group div p {
+  @apply font-semibold text-lg;
+}
+
+.form_container{
+  @apply border-t-2 border-white/25 md:border-none pt-[2rem] w-full;
+}
+/* // MENTOR SECTION STYLINGS */
+
+.mentor_desc {
+  @apply flex justify-center gap-5;
+}
+.mentor_desc p{
+  @apply text-[1.8rem] font-thin;
+}
+
+.mentor_image{
+  @apply flex justify-center items-center  h-[250px] overflow-hidden my-5;
+}
+
+.mentor_image img{
+  @apply w-[250px] h-[250px] object-cover rounded-lg;
+}
+
+.mentor{
+  @apply text-center rounded-xl cursor-pointer;
+}
+.mentor_title h2{
+  @apply text-xl uppercase;
+}
+
+
+/* // ANIMATION CTA STYLING HERE */
+
+.animation_section {
+  @apply flex flex-col justify-center items-center relative;
+}
+
+.animation_section h2{
+  @apply uppercase text-[5rem] absolute;
+}
+
+.bgOverlay{
+ @apply top-[35%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-[-1] tracking-[20px] md:tracking-[33px] md:leading-[5.5rem];
+}
+
+.bgOverlay h2{
+  @apply text-[2.5rem] md:text-[5rem] font-extrabold text-transparent;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 2px white;
+  color: transparent; /* so only stroke shows */
+}

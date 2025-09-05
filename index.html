@@ -4,21 +4,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./src/assets/images/favicon.png" type="image/x-icon">
     <title>Portfolio</title>
     <style>
-        :root {
-            --text: hsl(0, 0%, 98%);
-            --background: hsl(0, 0%, 5%);
-            --primary: hsl(0, 68%, 48%);
-            --secondary: hsl(243, 100%, 93%);
-            --accent: hsl(44, 100%, 58%);
-        }
+     
     </style>
 </head>
 
 <body>
+    <div id="loader" class="bg-background w-[100%] h-screen fixed top-0 left-0 z-[1000] flex justify-center items-center">
+        <div class="loaders flex justify-center items-center gap-2">
+            <div class="load w-10 h-10 bg-transparent border-t-2 border-white rounded-full"></div>
+        </div>
+    </div>
+
+     <!-- // MOBILE MENU -->
+    <div class="overlayMenu bg-black/50 backdrop-blur-sm w-[100%] fixed z-[101] top-0 right-[-100%] h-screen"
+        id="menuNavigation">
+        <div class="menu w-[80%] bg-white h-screen fixed top-0 right-0">
+            <div class="text-right p-2 text-2xl font-bold"><i id="close"><i class="ri-close-large-line"></i></i></div>
+            <h2 class="text-center text-primary font-extrabold text-[2rem] mb-10">ABDev</h2>
+            <ul class="flex flex-col justify-center items-center uppercase gap-5 text-2xl text-black/60">
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#project_section">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <section id="navbar">
+                <nav  class="md:w-[80%] w-[96%] mx-auto flex justify-between items-center uppercase py-5">
+                    <div class="text-2xl">
+                        <h1 class="nav_logo text-primary font-bold">ABDEV</h1>
+                    </div>
+                    <div>
+                        <ul class="md:flex items-center gap-[3rem] font-thin nav_links hidden">
+                            <li><a href="#">Skills</a></li>
+                            <li><a href="#">My Projects</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <div class="hidden md:block">
+                        <a href="#" class="nav_buttons">Get Started</a>
+                    </div>
+                    <div class="text-2xl md:hidden" id="menu_open">
+                        <i><i class="ri-menu-3-line"></i></i>
+                    </div>
+                </nav>
+            </section>
+   
+    <div class="wrapper bg-background text-white">
+        <main class="w-[95%] md:w-[80%] mx-auto min-h-screen relative z-[1]">
+            <!-- hero-seciton -->
+            
+            <section class="relative min-h-[55vh] flex items-end md:min-h-[50vh]">
+
+                <div class="flex justify-center items-center">
+                    <img src="./src/assets/images/hero_image_fast.png" alt="" srcset="" class="md:w-[50%] hero_image">
+                </div>
+               <div class="absolute bgOverlay text-stroke-white text-center">
+                <h2 class="bgText">LEARN</h2>
+                <h2 class="bgText">BUILD</h2>
+                <h2 class="bgText">DEPLOY</h2>
+               </div>
+
+            </section>
+
+            <!-- // MY SKILL SECTION -->
+            <section class="w-full " id="skills">
+                <h2 class="section_heading" id="mySkills">My Skills</h2>
+                <div class="skill_showcase">
+                  <div class="skill_cards">
+                    <div><img src="./src/assets/images/html.png" alt=""></div>
+                   
+                  </div>
+                  <div class="skill_cards">
+                    <div><img src="./src/assets/images/css.png" alt=""></div>
+                   
+                  </div>
+                  <div class="skill_cards">
+                    <div><img src="./src/assets/images/javascript.png" alt=""></div>
+                   
+                  </div>
+                  <div class="skill_cards">
+                    <div><img src="./src/assets/images/tailwindcss-2.png" alt=""></div>
+                   
+                  </div>
+                  <div class="skill_cards">
+                    <div><img src="./src/assets/images/gsap_2.png" alt=""></div>
+                   
+                  </div>
+                </div>
+            </section>
+
+            <!-- my project section -->
+            <section class="section_margins" id="project_section">
+                <h2 class="section_heading" id="myProjectHeading">My Projects</h2>
+                <section class="project_container">
+                    <section class="flex md:flex-row flex-col gap-5">
+                        <section class="project">
+                            <h1 class="project_title">UsabilityHub Clone</h1>
+                            <div class="w-full project_image_section">
+                                <img src="./src/assets/images/usability-project.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div>
+                                <div class="project_body">
+                                    <div class="project_details">
+
+                                        <p class="project_desc">
+                                            A clone of <a
+                                                href="https://usability-hub-clone.vercel.app/">UsabilityHub</a>
+                                            built with HTML, CSS, and JavaScript. This project replicates the design and
+                                            layout of the original website to practice front-end development and improve
+                                            UI/UX skills.
+                                        </p>
+                                    </div>
+
+                                    <div class="skill_used_section">
+                                        <div>
+                                            <h2 class="sub_heading">Skills used</h2>
+                                        </div>
+                                        <div class="skill_used">
+                                            <div><img src="./src/assets/images/html.png" alt="" srcset=""></div>
+                                            <div><img src="./src/assets/images/css.png" alt="" srcset=""></div>
+                                            <div><img src="./src/assets/images/javascript.png" alt="" srcset=""></div>
+                                            <div><img src="./src/assets/images/git.png" alt="" srcset=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="git_repo">
+                                        <h2 class="sub_heading">Git Hub repo link</h2>
+                                        <p>
+                                            <a
+                                                href="https://github.com/theAvinashdev/project_beta.git">https://github.com/theAvinashdev/project_beta.git</a>
+                                        </p>
+                                    </div>
+                                    <div class="project_links">
+                                        <div><a href="https://theavinashdev.github.io/project_beta/"
+                                                class="link_button">Visit Project</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="project">
+                            <h1 class="project_title">Tailwind Basic Project</h1>
+                            <div class="w-full project_image_section">
+                                <img src="./src/assets/images/tailwind-project.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div>
+                                <div class="project_body">
+                                    <div class="project_details">
+
+                                        <p class="project_desc">
+                                            A basic project built with HTML and Tailwind CSS to practice modern
+                                            utility-first styling. Hosted on GitHub Pages for easy access and learning
+                                            showcase."
+                                        </p>
+                                    </div>
+
+                                    <div class="skill_used_section">
+                                        <div>
+                                            <h2 class="sub_heading">Skills used</h2>
+                                        </div>
+                                        <div class="skill_used">
+                                            <div><img src="./src/assets/images/html.png" alt="" srcset=""></div>
+                                            <div><img src="./src/assets/images/css.png" alt="" srcset=""></div>
+                                            <div><img src="./src/assets/images/tailwindcss-circle.svg" alt="" srcset="">
+                                            </div>
+                                            <div><img src="./src/assets/images/git.png" alt="" srcset=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="git_repo">
+                                        <h2 class="sub_heading">Git Hub repo link</h2>
+                                        <p>
+                                            <a
+                                                href="https://github.com/theAvinashdev/theTailwindBasicProject.git">https://github.com/theAvinashdev/theTailwindBasicProject.git</a>
+                                        </p>
+                                    </div>
+                                    <div class="project_links">
+                                        <div><a href="https://theavinashdev.github.io/theTailwindBasicProject/"
+                                                class="link_button">Visit Project</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
 
 
+
+            <!-- mentor section -->
+            <section class="section_margins">
+                <h2 class="section_heading" id="myMentors">My Mentors</h2>
+                <div class="mentor_container  grid md:grid-cols-3 gap-5">
+                    <div class="mentor">
+                        <div class="mentor_image">
+                            <img src="./src/assets/images/harshvandan-sharma.png" alt="" srcset="">
+                        </div>
+                        <div class="mentor_title">
+                            <h2>Harshvandana Sharma</h2>
+                            <p><a href="">(Sherian Coding School)</a></p>
+                        </div>
+                        <div class="mentor_desc">
+                            <p><a href="https://www.instagram.com/harshvandanasharma/"><i
+                                        class="ri-instagram-line"></i></a></p>
+                            <p><a href="https://www.youtube.com/@sheryians"><i class="ri-youtube-line"></i></a></p>
+                            <p><a href="https://x.com/sheryians_"><i class="ri-twitter-x-line"></i></a></p>
+                        </div>
+                    </div>
+                    <div class="mentor">
+                        <div class="mentor_image">
+                            <img src="./src/assets/images/codewithharry.png" alt="" srcset="">
+                        </div>
+                        <div class="mentor_title">
+                            <h2>Haris Ali Khan</h2>
+                            <p>(CodewithHarry)</p>
+                        </div>
+                        <div class="mentor_desc">
+                            <p><a href="https://www.instagram.com/codewithharry/"><i class="ri-instagram-line"></i></a>
+                            </p>
+                            <p><a href="https://www.youtube.com/@CodeWithHarry"><i class="ri-youtube-line"></i></a></p>
+                            <p><a href="https://x.com/codewithharry"><i class="ri-twitter-x-line"></i></a></p>
+                        </div>
+                    </div>
+                    <div class="mentor">
+                        <div class="mentor_image">
+                            <img src="./src/assets/images/hitesh-chaudhary.png" alt="" srcset="">
+                        </div>
+                        <div class="mentor_title">
+                            <h2>Hitesh Choudhary</h2>
+                            <p>(HiteshCodeLab)</p>
+                        </div>
+                        <div class="mentor_desc">
+                            <p><a href="https://www.instagram.com/hiteshchoudharyofficial"><i
+                                        class="ri-instagram-line"></i></a></p>
+                            <p><a href="https://www.youtube.com/@HiteshCodeLab"><i class="ri-youtube-line"></i></a></p>
+                            <p><a href="https://x.com/Hiteshdotcom"><i class="ri-twitter-x-line"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- animation section -->
+            <section class="section_margins">
+                <div
+                    class="md:bg-black/60 w-full h-[25vh] md:min-h-[25vh] rounded-lg flex justify-center items-center flex-col ">
+                    <div class="animation_section whitespace-nowrap">
+                        <h2>Code</h2>
+                        <h2>Eat</h2>
+                        <h2>Sleep</h2>
+                        <h2>Repeat</h2>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- contact me section -->
+            <section class="section_margins border-2 border-white/25 p-[2rem] rounded-lg" id="contact">
+                <h2 class="section_heading">Contact Me</h2>
+                <section class="grid md:grid-cols-2 gap-[3rem] md:gap-[2rem]">
+                    <section>
+                        <div class="profile_image flex items-center justify-center"><img
+                                src="./src/assets/images/avinashdev-2.png" alt="" srcset="" class="w-[50%]"></div>
+                        <div class="profile_title">
+                            <h2 class="text-2xl font-primary text-center my-2 font-bold text-accent">Avinash Dev</h2>
+                        </div>
+                        <div class="profile_text">
+                            <p class="w-[80%] mx-auto text-center">A front-end developer who loves building clean,
+                                modern web apps. I’m always learning new technologies and creating projects that solve
+                                real problems.</p>
+                        </div>
+                        <div class="profile_profession text-center text-lg font-bold text-white/80 my-3">
+                            <p>Front-end Software Engineer</p>
+                        </div>
+                        <div class="profile_social_handles">
+                            <div class="social_links">
+                                <a href="https://www.instagram.com/avinashdev.me"><i class="ri-instagram-line"></i></a>
+                                <a href="https://www.facebook.com/abhinash.me"><i class="ri-facebook-box-line"></i></a>
+                                <a href="https://x.com/theAvinashDev"><i class="ri-twitter-x-line"></i></a>
+                                <a href="https://github.com/theAvinashdev"><i class="ri-github-line"></i></a>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+
+
+                        <div class="form_container md:w-[80%] mx-auto">
+                            <div class="form_heading mb-5 text-center md:text-left">
+                                <h2 class="text-2xl font-primary ">Send your query</h2>
+                                <p class="text-xl font-primary">Let's get connected...</p>
+                            </div>
+                            <form action="#">
+                                <div class="form_group">
+                                    <div>
+                                        <p>Your name</p>
+                                    </div>
+                                    <div><input type="text" name="username" id="username" class="user_fields"></div>
+                                </div>
+                                <div class="form_group">
+                                    <div>
+                                        <p>Your email</p>
+                                    </div>
+                                    <div><input type="text" name="username" id="username" class="user_fields"></div>
+                                </div>
+                                <div class="form_group">
+                                    <div>
+                                        <p>Your message</p>
+                                    </div>
+                                    <div><textarea name="message" id="message" class="user_fields"></textarea></div>
+                                </div>
+                                <div class="form_group">
+                                    <div><input type="submit" value="Send message"
+                                            class="bg-primary p-3 text-xl w-full font-primary rounded-md hover:text-white hover:bg-accent cursor-pointer">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </section>
+            </section>
+
+
+        </main>
+        <section class="section_margins">
+            <footer
+                class="font-primary grid md:text-left text-center md:grid-rows-1 md:grid-cols-[50%,1fr,1fr] w-[80%] mx-auto ">
+                <div class="w-[100%]">
+                    <h2 class="section_heading">AVINASH DEV</h2>
+                    <p class="md:pr-[8rem]">Thank you for visiting my portfolio ✨ Your feedback means the world to me ❤️
+                        Every follow, every word of support keeps me motivated to grow and create more. Let’s stay
+                        connected on Instagram — your encouragement inspires my journey. </p>
+                </div>
+                <div>
+                    <h2 class="sub_heading">Quick links</h2>
+                    <ul class="uppercase">
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="">
+                        <h2 class="sub_heading">Subscribe Newsletter</h2>
+                        <div>
+                            <form action="#">
+                                <input type="text" class="user_fields" placeholder="your email">
+                                <div>
+                                    <input type="submit" value="Subscribe"
+                                        class="bg-primary p-2 text-xl w-full font-primary rounded-md hover:text-white hover:bg-accent cursor-pointer">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+        <section class="text-center text-black bg-[#2EC4B6] mt-[2rem] py-3">
+            <h2>© 2025 Made by @AvinashDev. All rights reserved.</h2>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/main.js">
+
+    </script>
 </body>
 
 </html>
