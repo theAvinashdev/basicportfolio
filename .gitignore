@@ -58,3 +58,6 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+
+package-lock.json
+tailwind.config.js
