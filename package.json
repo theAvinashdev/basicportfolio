@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "tailwindcss": "^3.4.17"
-  },
-  "scripts": {
-    "watch":"npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "minify":"npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
-  }
-}
