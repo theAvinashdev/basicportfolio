@@ -16,7 +16,6 @@ yarn.lock
 # But keep images
 !src/assets/images/
 
-
 # Environment files
 .env
 .env.local
@@ -58,6 +57,3 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-
-package.json
-tailwind.config.js
